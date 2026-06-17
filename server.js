@@ -24,7 +24,7 @@ async function processQueue() {
           body: JSON.stringify(job.payload)
         });
 
-        const text = await res.text();
+         console.log("HEADERS:", [...res.headers.entries()]);
 
         if (res.status === 200) {
           done = true;
